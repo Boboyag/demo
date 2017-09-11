@@ -1,0 +1,123 @@
+@import "reset.less";
+@color-1: #fe0000;
+@color-2: #1e7a2c;
+@width: 660px;
+.inline-block () {
+    display: inline-block;
+}
+
+
+.wrapper {
+    width: @width;
+    margin: 70px auto;
+    background: #fff;
+}
+
+.header {
+    width: @width;
+    height: 145px;
+    .bus-number {
+        position: relative;
+        .inline-block;
+        width: 290px;
+        .number {
+            .inline-block;
+            width: 200px;
+            height: 104px;
+            margin-top: 16px;
+            font-size: 110px;
+            color: #fff;
+            line-height: 100px;
+            text-align: center;
+            background: (@color-1);
+        }
+        .time {
+            .inline-block;
+            margin-left: 10px;
+            font-size: 17px;
+            line-height: 25px;
+        }
+    }
+    .bus-station {
+        .inline-block;
+        width: 300px;
+        position: relative;
+        top: -19px;
+        font-family: "NSimSun";
+        span {
+            .inline-block;
+            font-size: 25px;
+            color: (@color-2 + #010);
+            &:nth-child(1),
+            &:nth-child(4) {
+                font-weight: 600;
+                margin-left: 8px;
+            }
+            &:nth-child(2),
+            &:nth-child(3) {
+                font-size: 19px;
+                margin-top: 3px;
+            }
+            &:nth-child(3) {
+                margin-left: 50px;
+            }
+            &:nth-child(4) {
+                margin-top: 18px;
+                color: (@color-1 + #011);
+            }
+        }
+    }
+}
+
+.content {
+    width: @width;
+    background: @color-2;
+    height: 178px;
+    font-size: 0;
+    ul {
+        width: @width;
+        li {
+            .inline-block;
+            width: (@width/17);
+            height: 178px;
+            color: #fff;
+            font-size: 21px;
+            padding: 5px 0px 0px 9px;
+            vertical-align: middle;
+            &:nth-child(4) {
+                color: (@color-1 + #022);
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.footer {
+    width: @width;
+    text-align: center;
+    font-size: 0;
+    position: relative;
+    span {
+        font-size: 14px;
+    }
+    div {
+        .inline-block;
+        background: @color-1;
+    }
+    .arrows-left {
+        height: 5px;
+        width: 600px;
+        line-height: 7px;
+    }
+    .arrows-right {
+        border-width: 7px 30px;
+        border-style: solid;
+        border-color: @color-1;
+        border-right-color: #fff;
+        border-top-color: #fff;
+        display: inline-block;
+        position: absolute;
+        bottom: 1px;
+        right: 30px;
+    }
+}
